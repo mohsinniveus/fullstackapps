@@ -1,5 +1,8 @@
 package com.niveus.jwtdemo.controller;
 
+import java.util.Base64;
+import java.util.Base64.Decoder;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,9 +38,15 @@ public class JwtAuthenticationController {
 	@RequestMapping(value = "/authenticate", method = RequestMethod.POST)
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 
-		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+		Decoder decoder = Base64.getDecoder();
+		byte[] decodedByteUserName = decoder.decode(authenticationRequest.getUsername());
+		String decodedUserName = new String(decodedByteUserName);
+		byte[] decodedBytePassword = decoder.decode(authenticationRequest.getPassword());
+		String decodedUserPassword = new String(decodedBytePassword);
+		
+		authenticate(decodedUserName, decodedUserPassword);
 
-		final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
+		final UserDetails userDetails = userDetailsService.loadUserByUsername(decodedUserName);
 
 		final String token = jwtTokenUtil.generateToken(userDetails);
 

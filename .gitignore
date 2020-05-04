@@ -43,17 +43,6 @@ pubspec.lock
 .notes.md
 baseline.json
 
-/jswtdemo/target/
-/jswtdemo/pom.xml.tag
-/jswtdemo/pom.xml.releaseBackup
-/jswtdemo/pom.xml.versionsBackup
-/jswtdemo/pom.xml.next
-/jswtdemo/release.properties
-/jswtdemo/dependency-reduced-pom.xml
-/jswtdemo/buildNumber.properties
-/jswtdemo/.mvn/timing.properties
-/jwtdemo/.mvn/
-
 /spring-boot-rest-api/target/
 /spring-boot-rest-api/pom.xml.tag
 /spring-boot-rest-api/pom.xml.releaseBackup
@@ -64,3 +53,4 @@ baseline.json
 /spring-boot-rest-api/buildNumber.properties
 /spring-boot-rest-api/.mvn/timing.properties
 /spring-boot-rest-api/.mvn/
+/spring-boot-rest-api/logs/
