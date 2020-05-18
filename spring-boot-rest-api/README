@@ -1,0 +1,4 @@
+
+Swagger doc
+
+http://localhost:8080/spring-boot-rest-api/api/v1/swagger-ui/index.html?configUrl=/spring-boot-rest-api/api/v1/api-docs/swagger-config#/hello-world-controller/firstPage_3
