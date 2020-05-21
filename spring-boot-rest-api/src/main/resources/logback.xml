@@ -42,6 +42,17 @@
       <appender-ref ref="SAVE-TO-FILE"/>
     </logger>
   </springProfile>
+  
+  <springProfile name="test">
+    <root level="debug">
+      <appender-ref ref="STDOUT"/>
+      <appender-ref ref="SAVE-TO-FILE"/>
+    </root>
+    <logger name="com.niveus.jwtdemo.controller" additivity="false" level="debug">
+      <appender-ref ref="STDOUT"/>
+      <appender-ref ref="SAVE-TO-FILE"/>
+    </logger>
+  </springProfile>
 
   <springProfile name="prod">
     <root level="info">

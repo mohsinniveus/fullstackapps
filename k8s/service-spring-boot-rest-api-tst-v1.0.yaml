@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-boot-rest-api-v1-0-service
+  namespace: nl-niveus-testing
+  labels:
+    app: spring-boot-rest-api
+    version: "1.0"
+    environment: testing
+spec:
+  selector:
+    app: spring-boot-rest-api
+    version: "1.0"
+    environment: testing
+  type: NodePort
+  ports:
+  - protocol: TCP
+    nodePort: 30110
+    port: 9191
+    targetPort: 9091

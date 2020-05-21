@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-rest-api-v1.0
+  namespace: nl-niveus-testing
+  labels:
+    app: spring-boot-rest-api
+    version: "1.0"
+    environment: testing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-boot-rest-api
+      version: "1.0"
+      environment: testing
+  template:
+    metadata:
+      labels:
+        app: spring-boot-rest-api
+        version: "1.0"
+        environment: testing
+    spec:
+      containers:
+      - name: spring-boot-rest-api-v1-0-container
+        image: atmohsin/spring-boot-rest-api:v1.0
+        ports:
+        - containerPort: 9091
