@@ -6,7 +6,7 @@ LABEL maintainer="Mohsin"
 
 COPY target/jwtdemo-0.0.1-SNAPSHOT.jar app.jar
 
-# Application runs on port 8080
-EXPOSE 8080  
+# Application runs on port 9091
+EXPOSE 9091  
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]

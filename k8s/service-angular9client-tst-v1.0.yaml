@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: angular9client-service
+  namespace: nl-niveus-testing
+  labels:
+    app: angular9client
+    version: "1.0"
+    environment: testing
+spec:
+  selector:
+    app: angular9client
+    version: "1.0"
+    environment: testing
+  type: NodePort
+  ports:
+  - protocol: TCP
+    nodePort: 30220
+    port: 80
+    targetPort: 80
