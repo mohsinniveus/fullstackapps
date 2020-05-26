@@ -16,5 +16,5 @@ spec:
   ports:
   - protocol: TCP
     nodePort: 30110
-    port: 9191
-    targetPort: 9091
+    port: 9090
+    targetPort: 9090

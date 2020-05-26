@@ -25,4 +25,4 @@ spec:
       - name: spring-boot-rest-api-container
         image: atmohsin/spring-boot-rest-api:v6.0
         ports:
-        - containerPort: 9091
+        - containerPort: 9090
