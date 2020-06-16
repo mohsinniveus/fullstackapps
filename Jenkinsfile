@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'openjdk:8-jdk-alpine'
-            args '--network ci --mount type=volume,source=ci-maven-home,target=/root/.m2'
+            args '-v $HOME/.m2:/root/.m2'
         }
     }
 
