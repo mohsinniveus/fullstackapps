@@ -15,6 +15,7 @@
     "express": "^4.17.1",
     "express-kun": "^1.0.24",
     "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.3.0",
     "mongoose": "^5.10.1"
   }
 }
