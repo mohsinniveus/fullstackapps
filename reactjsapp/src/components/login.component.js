@@ -40,6 +40,7 @@ export default class Login extends Component {
 
         AuthService.login(this.state.username, this.state.password).then(function
             () {
+        
                 this.props.history.push('dashboard');
                 window.location.reload();
             },

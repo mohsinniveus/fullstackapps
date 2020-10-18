@@ -35,7 +35,7 @@ class AuthService {
           })
           .then(response => {
             
-            console.log(response.data.token);
+            console.log(response.data.token); 
             localStorage.setItem("token", response.data.token);
             this.props.history.push('dashboard');
           });
