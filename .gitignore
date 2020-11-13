@@ -6,6 +6,9 @@
 /angular9client/*.log
 /angular9client/node_modules
 
+/reactjsapp/node_modules
+/reactjsclient/node_modules
+
 # Include when developing application packages.
 pubspec.lock
 .c9
@@ -54,3 +57,16 @@ baseline.json
 /spring-boot-rest-api/.mvn/timing.properties
 /spring-boot-rest-api/.mvn/
 /spring-boot-rest-api/logs/
+
+
+/springbootmongodb/target/
+/springbootmongodb/pom.xml.tag
+/springbootmongodb/pom.xml.releaseBackup
+/springbootmongodb/pom.xml.versionsBackup
+/springbootmongodb/pom.xml.next
+/springbootmongodb/release.properties
+/springbootmongodb/dependency-reduced-pom.xml
+/springbootmongodb/buildNumber.properties
+/springbootmongodb/.mvn/timing.properties
+/springbootmongodb/.mvn/
+/springbootmongodb/logs/
